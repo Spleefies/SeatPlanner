@@ -21,7 +21,7 @@ body {
 
 #app {
   display: grid;
-  grid-template-columns: repeat(2, auto) 3em repeat(2, auto) 3em repeat(2, auto);
+  grid-template-columns: repeat(2, auto) 4em repeat(2, auto) 4em repeat(2, auto);
   grid-template-rows: repeat(5, 6em);
   column-gap: .4em;
   row-gap: .4em;
