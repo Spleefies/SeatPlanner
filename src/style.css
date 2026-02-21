@@ -13,7 +13,10 @@
   font-size: medium;
 }
 .pico{
-  padding: 4em;
+  padding: 1%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }
 
 body {
@@ -24,7 +27,7 @@ body {
 
 #app {
   display: grid;
-  grid-template-columns: repeat(2, auto) 4em repeat(2, auto) 4em repeat(2, auto);
+  grid-template-columns: auto auto 6.7vw auto auto 6.7vw auto auto;
   grid-template-rows: repeat(5, 6em);
   column-gap: .4em;
   row-gap: .4em;
@@ -41,7 +44,9 @@ body {
 
 .cell {
   display: flex;
-  width: 6em;
+  width: 9.5vw;
+  min-width: 10ch;
+  max-width: 6em;
   height: 5.2em;
   align-items: center;
   justify-content: center;
@@ -56,8 +61,8 @@ body {
   background-color: #1fc7ff;
 }
 .sortable-ghost{
-  background-color: rgb(40,154,255);
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 5px;
+  background-color: rgb(40 154 255);
+  box-shadow: rgba(100 100 111 0.2) 0px 7px 29px 5px;
   scale: 1.05;
   cursor: grabbing;
 }
@@ -70,3 +75,26 @@ body {
 svg{
   transform: translateY(-10%);
 }
+.sortable-drag{
+  cursor: grabbing;
+}
+.sortable-chosen{
+  cursor: grabbing;
+}
+#app:has(.sortable-ghost) *{
+  cursor: grabbing;
+}
+
+@media (orientation: portrait) {
+  body {
+    display: flex;
+    width: fit-content;
+    flex-direction: column;
+    gap: 5vh
+  }
+  .pico {
+    margin: auto;
+  }
+}
+
+/* <= 826 bottom*/
