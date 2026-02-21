@@ -23,6 +23,7 @@ body {
   display: flex;
   place-items: center;
   min-height: 100vh;
+  min-width: 100vw;
 }
 
 #app {
@@ -92,8 +93,8 @@ svg{
     flex-direction: column;
     gap: 5vh
   }
-  .pico {
-    margin: auto;
+  .pico, #app {
+    margin: 0 auto;
   }
 }
 
