@@ -76,9 +76,9 @@ function copyURL() {
       items += newIndexes[i].padStart(2,'0')
     }
     items += newNames[i]
-    items += ','
+    if (i < 29) items += ','
   }
-  navigator.clipboard.writeText(`${window.location.href.split('?')[0]}?items=${items}`.replace(' ','+'))
+  navigator.clipboard.writeText(`${window.location.href.split('?')[0]}?items=${items}`.replaceAll(' ','+'))
   copyBtn!.textContent = "Copied!"
   setTimeout(() => {copyBtn!.textContent = "Copy Link"}, 1000)
 }
