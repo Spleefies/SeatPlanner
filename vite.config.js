@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  base: '/seatplanner/',
+  base: '/SeatPlanner/',
   server: {
     port: 5347,
   }
